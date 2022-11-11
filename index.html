@@ -32,12 +32,18 @@
         <main>
             <div id="app">
                 <div class="container mt-5">
-                    <ul v-for="(item, i) of email">
+                    <ul v-if="email.length === 10" v-for="(item, i) of email">
                         <li :key="i">
                             <span>{{i+1}})</span>
                             <span>{{item}}</span>
                         </li>
                     </ul>
+                    <div v-else class="lds-ring">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </main>
