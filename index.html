@@ -30,7 +30,16 @@
     <body>
         <!-- MAIN -->
         <main>
-            <div id="app"></div>
+            <div id="app">
+                <div class="container mt-5">
+                    <ul v-for="(item, i) of email">
+                        <li :key="i">
+                            <span>{{i+1}})</span>
+                            <span>{{item}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </main>
 
         <script src="assets/js/script.js"></script>
